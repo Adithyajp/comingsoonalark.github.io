@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Al Ark`</title>
+  <link rel="shortcut icon"  href="logo.png"/>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+      <div class="wrapper">
+        <div class="loader"></div>
+    </div>
+  <header>
+    <div class="content">
+    	<img src="logo.png">
+    	<h1>AL ARK`</h1>
+    	<h2>Coming Soon</h2>
+      <div class="countdown">00 : 00 : 00 : 00</div>
+        	<h5>©2021 AL ARK`.All rights reserved.</h5>
+    </div>
+  </header>
+
+  <script src="main.js"></script>
+  <script>
+
+    TweenMax.to(".wrapper", 2, {
+        top: "-100%",
+        ease: Expo.easeInOut,
+        delay: 1.1
+    });
+
+    var tl = new TimelineMax();
+
+    tl.from(".loader", 1, {
+        scaleY: "0%",
+        y: 80,
+        ease: Expo.easeInOut,
+        delay: 0,
+        transformOrigin:"50% 100%"
+    });
+
+    tl.to(".loader", 1, {
+        height: "20vh",
+        scaleY: "0%",
+        ease: Expo.easeInOut,
+        transformOrigin:"0% -100%"
+    });
+  </script>
+
+</body>
+</html>
